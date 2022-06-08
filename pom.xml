@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.inetpsa.ciq</groupId>
+        <artifactId>psa-java-root</artifactId>
+        <version>3.6.1</version>
+    </parent>
+
+
+    
+    <groupId>com.inetpsa.nrb</groupId>
+    <artifactId>nrb-dao</artifactId>
+    <version>1.0.28-SNAPSHOT</version>    
+
+    <name>nrb-dao</name> 
+       <description>Spring Boot project for Corbat</description>
+ <packaging>jar</packaging>
+    
+
+    <properties>
+        <envInst>nrb00</envInst>
+        <resourcesOutsourcedDirectory>src/main/resources</resourcesOutsourcedDirectory>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <sonar.branch.name>release-5.0</sonar.branch.name>
+        <java.version>8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+
+        <logback.version>1.2.3</logback.version>
+        <assertj.version>3.9.0</assertj.version>
+        <rest-assured.version>3.3.0</rest-assured.version>
+    </properties>
+
+
+    <distributionManagement>
+        <site>
+            <id>projectSite</id>
+            <url>${urlProjectSite}</url>
+        </site>
+    </distributionManagement>
+
+    <dependencies>
+        
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>2.6.1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+      
+        
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.6.1</version>
+            <scope>test</scope>
+        </dependency>
+       
+
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc8</artifactId>
+            <version>12.2.0.1</version>
+            <scope>runtime</scope>
+        </dependency>
+        
+        <dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+     <version>2.1.210</version>
+      <scope>runtime</scope>
+</dependency>
+    </dependencies>
+
+
+
+</project>
